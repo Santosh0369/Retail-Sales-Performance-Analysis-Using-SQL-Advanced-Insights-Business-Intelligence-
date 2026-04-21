@@ -200,19 +200,10 @@ Tracks **growth over time**
 
 ### ✅ Key concept:
 
-```sql
-SUM(total_sales) OVER (ORDER BY order_date)
-```
+<img width="820" height="607" alt="image" src="https://github.com/user-attachments/assets/8dc49424-ba6a-47c2-a186-8053e925d419" />
+
 
 👉 Running total (cumulative sales)
-
----
-
-### ✅ Also calculates:
-
-```sql
-AVG(avg_price) OVER (ORDER BY order_date)
-```
 
 👉 Moving average price
 
@@ -231,21 +222,16 @@ AVG(avg_price) OVER (ORDER BY order_date)
 
 ---
 
-### ✅ Step 1: CTE (yearly_product_sales)
 
-```sql
-WITH yearly_product_sales AS (...)
-```
+<img width="792" height="674" alt="image" src="https://github.com/user-attachments/assets/85c0fe42-8f67-4384-8e92-d790fe371f50" />
+
+### ✅ CTE (yearly_product_sales)
 
 👉 Creates yearly sales per product
 
 ---
 
-### ✅ Step 2: Compare with Average
-
-```sql
-AVG(current_sales) OVER (PARTITION BY product_name)
-```
+### ✅ Compare with Average
 
 👉 For each product:
 
@@ -254,10 +240,6 @@ AVG(current_sales) OVER (PARTITION BY product_name)
 ---
 
 ### ✅ Difference from average:
-
-```sql
-current_sales - avg_sales
-```
 
 👉 Shows:
 
@@ -268,30 +250,17 @@ current_sales - avg_sales
 
 ### ✅ CASE Logic:
 
-```sql
-CASE 
-    WHEN > 0 THEN 'Above Avg'
-```
-
 👉 Converts numbers → business labels
 
 ---
 
 ### ✅ Year-over-Year (YOY)
 
-```sql
-LAG(current_sales)
-```
-
 👉 Gets **previous year sales**
 
 ---
 
 ### ✅ YOY Growth:
-
-```sql
-current_sales - previous_year_sales
-```
 
 👉 Shows:
 
@@ -318,10 +287,8 @@ This is **real business analysis**:
 
 ### ✅ Logic:
 
-```sql
-CASE 
-    WHEN cost < 100 THEN 'Below 100'
-```
+<img width="618" height="509" alt="image" src="https://github.com/user-attachments/assets/81c4cc8a-3cd9-4a4a-a971-66f431d23d7d" />
+
 
 👉 Groups products by cost
 
@@ -351,10 +318,8 @@ CASE
 
 ### Step 2: Segment customers
 
-```sql
-CASE 
-    WHEN lifespan >= 12 AND spending > 5000 THEN 'VIP'
-```
+<img width="731" height="671" alt="image" src="https://github.com/user-attachments/assets/343ce61d-36b7-41a5-945e-0dc8c269d970" />
+
 
 👉 Segments:
 
@@ -377,29 +342,13 @@ CASE
 
 Finds **contribution of each category**
 
----
-
 ### Step 1: Total sales per category
-
-```sql
-SUM(sales_amount)
-```
-
----
 
 ### Step 2: Overall sales
 
-```sql
-SUM(total_sales) OVER ()
-```
-
----
-
 ### Step 3: Percentage contribution
-
-```sql
-(total_sales / overall_sales) * 100
-```
+---
+<img width="788" height="625" alt="image" src="https://github.com/user-attachments/assets/ab32c45f-5c50-4951-b6e8-47ace3f17057" />
 
 ---
 
@@ -438,7 +387,7 @@ This script shows:
 
 ---
 
-# 💬 Interview Explanation (Use This!)
+# 💬  Explanation!
 
 > "This SQL script performs advanced analytics on retail data, including time-series analysis to track trends, cumulative analysis for growth tracking, and performance analysis using window functions like LAG for year-over-year comparisons. It also includes customer and product segmentation using CASE statements and part-to-whole analysis to measure category contribution to total revenue."
 
@@ -446,16 +395,8 @@ This script shows:
 
 # 🧠 Simple Summary
 
-👉 In one line:
-
 > This code analyzes **how the business performs over time, who the best customers are, which products matter most, and where growth is happening**
 
 ---
-
-If you want next step, I can:
-
-* Create **README for THIS script (most powerful project)**
-* Or give **real business insights you can speak in interviews (game changer)** 🚀
-
 
 ---
