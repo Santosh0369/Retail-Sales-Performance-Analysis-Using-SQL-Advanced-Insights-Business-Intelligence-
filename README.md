@@ -127,12 +127,9 @@ To extend this analysis:
 This project demonstrates how SQL can be used beyond basic querying to perform **advanced business analysis**, uncover key insights, and support strategic decision-making in a retail environment.
 
 
-This script is a **next-level SQL analytics file** — it goes beyond basic EDA and focuses on:
 
 > 📊 **Time-series analysis + performance tracking + segmentation + contribution analysis**
 
-I’ll break it down clearly so you can **understand + explain it in interviews** 👇
-(Your file: )
 
 ---
 
