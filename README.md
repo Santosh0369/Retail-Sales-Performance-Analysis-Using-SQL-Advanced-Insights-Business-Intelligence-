@@ -143,9 +143,8 @@ Tracks how business metrics **change over time (monthly/yearly)**
 
 ### ✅ Query 1: Year & Month Breakdown
 
-```sql
-YEAR(order_date), MONTH(order_date)
-```
+<img width="707" height="563" alt="image" src="https://github.com/user-attachments/assets/1fb4a749-6715-4a11-a448-f3fc727c3d7e" />
+
 
 👉 Groups data by:
 
@@ -167,9 +166,8 @@ YEAR(order_date), MONTH(order_date)
 
 ### ✅ Query 2: Using `DATETRUNC()`
 
-```sql
-DATETRUNC(month, order_date)
-```
+<img width="670" height="519" alt="image" src="https://github.com/user-attachments/assets/f3fe925e-15a3-4cea-8c81-fcdc36ebc531" />
+
 
 👉 Cleaner way to group dates into months
 
@@ -180,11 +178,10 @@ DATETRUNC(month, order_date)
 
 ### ✅ Query 3: Using `FORMAT()`
 
-```sql
-FORMAT(order_date, 'yyyy-MMM')
-```
+<img width="682" height="545" alt="image" src="https://github.com/user-attachments/assets/1e9b678b-6511-45de-9a58-bf91b1b150ad" />
 
-👉 Converts date into readable format like:
+
+👉 Converts date into a readable format like:
 
 * `2024-Jan`
 
